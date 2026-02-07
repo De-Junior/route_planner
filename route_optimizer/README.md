@@ -1,16 +1,56 @@
-# route_optimizer
+# Route Optimizer (Flutter)
 
-A new Flutter project.
+A simple Flutter application that allows a user to create and manage a route with multiple stops, apply validation to user input, and reorder stops using a deterministic optimization rule.
 
-## Getting Started
+This project was built as a take-home exercise to demonstrate clean architecture, basic state management, validation, sorting logic, and unit testing in Flutter.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- View a route with a list of stops
+- Add new stops with validation
+- Delete individual stops
+- Optimize stop order based on latitude and longitude
+- Edit the route name
+- Fully tested business logic (no UI tests required)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Tech Stack
+
+- **Flutter**
+- **Dart**
+- **Provider** (ChangeNotifier)
+- **flutter_test** for unit testing
+
+---
+
+## Project Structure
+
+lib/
+ ├─ models/
+ │   ├─ stop.dart
+ │   └─ route_plan.dart
+ │
+ ├─ state/
+ │   └─ route_plan_notifier.dart
+ │
+ ├─ screens/
+ │   ├─ route_screen.dart
+ │   └─ add_stop_screen.dart
+ │
+ ├─ widgets/
+ │   └─ stop_tile.dart
+ │
+ └─ main.dart
+
+ ---
+
+## Running the app
+```bash
+flutter pub get
+flutter run
+
+  Running tests
+flutter test
