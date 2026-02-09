@@ -45,6 +45,14 @@ lib/
 
  ---
 
+## Architecture
+Input validation (non-empty name, latitude/longitude ranges) and stop optimization logic live in
+`RoutePlanNotifier` (`lib/state/route_plan_notifier.dart`). The UI screens in `lib/screens/` only
+collect user input, call notifier methods (`addStop`, `deleteStop`, `optimizeStops`), and render
+the current `RoutePlan` state.
+
+---
+
 ## Running the app
 ```bash
 flutter pub get
