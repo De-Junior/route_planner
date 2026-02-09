@@ -40,8 +40,6 @@ lib/
  │   ├─ route_screen.dart
  │   └─ add_stop_screen.dart
  │
- ├─ widgets/
- │   └─ stop_tile.dart
  │
  └─ main.dart
 
